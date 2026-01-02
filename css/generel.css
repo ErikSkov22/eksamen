@@ -1,0 +1,116 @@
+/** ===== VARIABLER ===== **/
+:root {
+  /* Farver */
+  --bg-color: #efe2d8; /* baggrund */
+  --text-color: #2d4022; /* grøn tekst */
+  --box-bg-color: #e9efe8; /* grøn bokse */
+  --border-color: rgba(45, 64, 34, 0.2);
+
+  /* Typografi */
+  --h1-font: "DM Sans", sans-serif;
+  --p-font: "DM Sans", sans-serif;
+
+  /* Font weights */
+  --h1-weight: 700; /* Bold */
+  --p-weight: 400; /* Regular */
+
+  /* Størrelser */
+  --h1-size: clamp(2.2rem, 7vw, 3rem);
+  --p-size: 1rem;
+
+  /* Spacing & form */
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --text-space: 0.6rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--p-font);
+  font-weight: var(--p-weight);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--h1-font);
+  font-weight: var(--h1-weight);
+  font-size: var(--h1-size);
+  letter-spacing: 0.04em;
+  margin-block: var(--text-space);
+}
+
+p {
+  font-size: var(--p-size);
+  margin-block: var(--text-space);
+}
+
+.btn {
+  background-color: var(--box-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== HERO (FORSIDE) ===== */
+.hero {
+  min-height: 100svh; /* fylder hele skærmen på mobil */
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrer vandret */
+  text-align: center; /* centrer tekst */
+  gap: 0.75rem;
+}
+
+.hero__logo {
+  width: min(320px, 80vw);
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__name {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hero__subtitle {
+  opacity: 0.9;
+}
+
+.hero__name,
+.hero__subtitle {
+  margin-block: 0.05rem;
+}
+
+.hero__title {
+  letter-spacing: 0.08em;
+}
+
+/* knapperne */
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* så knapperne ikke bliver for store */
+.btn {
+  min-width: 140px;
+  text-align: center;
+}

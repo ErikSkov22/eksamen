@@ -17,6 +17,24 @@
 </head>
 
 <body>
+    <header class="site-header">
+
+        <button class="burger" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+    </header>
+
+    <nav id="mobileMenu" class="mobile-nav" aria-label="Mobil navigation">
+        <a href="index.html">FORSIDE</a>
+        <a href="projekter.html">PROJEKTER</a>
+        <a href="ommig.html">OM MIG</a>
+
+    </nav>
+
+
+
     <main class="hero">
         <img class="hero__logo" src="img/logoeksamen1.sem2.svg" alt="ES logo">
 
@@ -30,6 +48,24 @@
             <a class="btn" href="ommig.html">OM MIG</a>
         </nav>
     </main>
+
+    <footer class="site-footer" aria-label="Footer">
+        <div class="site-footer__divider" aria-hidden="true"></div>
+        <div class="site-footer__icons" aria-label="Sociale links">
+            <a href="#" aria-label="LinkedIn">
+                <img src="img/linkedin-svgrepo-com.svg" alt="">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="img/instagram-icon-svgrepo-com.svg" alt="">
+            </a>
+            <a href="#" aria-label="Mail">
+                <img src="img/mail-alt-svgrepo-com.svg" alt="">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+
 </body>
 
 </html>

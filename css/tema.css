@@ -1,0 +1,179 @@
+/* =========================
+   TEMA UNDERSIDER (MOBILE FIRST)
+   ========================= */
+
+/* Desktop wrapper (på mobil gør den ingenting) */
+.desktop-layout {
+  min-height: 100svh;
+}
+
+/* Sidebar vises kun på desktop */
+.sidebar {
+  display: none;
+}
+
+/* Page container */
+.tema-page {
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+/* Titel */
+.tema-page__title {
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin: 1rem 0 2rem;
+}
+
+/* Grid til indhold */
+.tema-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Tekstblok */
+.tema-block {
+  max-width: 650px;
+}
+
+.tema-block p + p {
+  margin-top: 1rem;
+}
+
+/* Billede */
+.tema-media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(45, 64, 34, 0.18);
+  box-shadow: var(--shadow);
+}
+
+.tema-media img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* =========================
+   CTA / knapper
+   ========================= */
+.tema-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+
+  /* video-knappen skal være “venstre” */
+  align-items: flex-start;
+
+  gap: 1.25rem;
+}
+
+/* Video-knap (samme stil som dine andre btn) */
+.tema-actions .tema-actions__btn {
+  min-width: 200px;
+  text-align: center;
+}
+
+/* Tilbage-wrapper: fuld bredde så vi kan centrere */
+.back-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tilbage-knap (secondary) */
+.btn--secondary {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   DESKTOP / TABLET
+   ========================= */
+@media (min-width: 768px) {
+  /* Skjul mobil navigation + footer på desktop */
+  .site-header,
+  .mobile-nav,
+  .site-footer {
+    display: none;
+  }
+
+  /* Sidebar layout */
+  .desktop-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100svh;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    padding: 3.5rem 1.5rem 2rem;
+    border-right: 1px solid rgba(45, 64, 34, 0.18);
+    background: var(--bg-color);
+
+    position: sticky;
+    top: 0;
+    height: 100svh;
+  }
+
+  .sidebar__logo-img {
+    width: 120px;
+    height: auto;
+    display: block;
+  }
+
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sidebar__nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .sidebar__nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .sidebar__nav a.is-active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .sidebar__icons {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sidebar__icons img {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+
+  /* Content */
+  .tema-page {
+    padding: 2.5rem 3rem 4rem;
+  }
+
+  .tema-page__title {
+    margin: 0 0 3rem;
+  }
+
+  .tema-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}

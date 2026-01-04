@@ -221,3 +221,24 @@
     order: 1;
   }
 }
+
+/* =========================
+   Flere billeder i samme kolonne
+   ========================= */
+
+.tema-media-group {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* SVG skal ikke være "klemt" */
+.tema-media--svg {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.tema-media--svg img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}

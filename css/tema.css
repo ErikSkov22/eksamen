@@ -242,3 +242,11 @@
   aspect-ratio: auto;
   object-fit: contain;
 }
+/* Video skal opføre sig som billeder */
+.tema-media video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: inherit;
+}

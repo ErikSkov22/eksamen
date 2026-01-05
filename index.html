@@ -18,7 +18,6 @@
 
 <body>
     <header class="site-header">
-
         <button class="burger" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="mobileMenu">
             <span class="burger__line"></span>
             <span class="burger__line"></span>
@@ -30,10 +29,7 @@
         <a href="index.html">FORSIDE</a>
         <a href="projekter.html">PROJEKTER</a>
         <a href="ommig.html">OM MIG</a>
-
     </nav>
-
-
 
     <main class="hero">
         <img class="hero__logo" src="img/logoeksamen1.sem2.svg" alt="ES logo">
@@ -49,11 +45,11 @@
         </nav>
     </main>
 
-    <footer class="site-footer" aria-label="Footer">
+    <footer class="site-footer">
         <div class="site-footer__divider" aria-hidden="true"></div>
 
-        <div class="site-footer__icons" aria-label="Sociale links">
-
+        <!-- ✅ nav i stedet for div, så aria-label er lovlig -->
+        <nav class="site-footer__icons" aria-label="Sociale links">
             <a href="https://www.linkedin.com/in/erik-skov-hansen-333b3139a/" target="_blank"
                 aria-label="Besøg min LinkedIn profil">
                 <img src="img/linkedin-svgrepo-com.svg" alt="LinkedIn ikon">
@@ -66,13 +62,10 @@
             <a href="mailto:erikskovhansen@gmail.com" aria-label="Send mig en mail">
                 <img src="img/mail-alt-svgrepo-com.svg" alt="Mail ikon">
             </a>
-
-        </div>
+        </nav>
     </footer>
 
-
     <script src="js/menu.js"></script>
-
 </body>
 
 </html>
